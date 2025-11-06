@@ -1,4 +1,4 @@
-import {ManageFeatures} from "@/pages/manageFeatures/ui/ManageFeatures";
+import ManageFeatures from "@/pages-fsd/manageFeatures/ui/ManageFeatures";
 
 const Page = () => {
     return (

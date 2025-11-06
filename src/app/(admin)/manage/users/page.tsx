@@ -1,4 +1,4 @@
-import {ManageUsers} from "@/pages/manageUsers/ui/ManageUsers";
+import ManageUsers from "@/pages-fsd/manageUsers/ui/ManageUsers";
 
 const Page = () => {
     return (

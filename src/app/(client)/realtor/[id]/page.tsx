@@ -1,4 +1,4 @@
-import {ClientRealtorPage} from "@/pages/clientRealtorDetail/ui/ClientRealtorPage";
+import ClientRealtorPage from "@/pages-fsd/clientRealtorDetail/ui/ClientRealtorPage";
 
 const Page = () => {
     return (

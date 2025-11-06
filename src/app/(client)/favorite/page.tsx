@@ -1,4 +1,4 @@
-import {ClientFavorite} from "@/pages/clientFavorite/ui/ClientFavorite";
+import ClientFavorite from "@/pages-fsd/clientFavorite/ui/ClientFavorite";
 
 const Page = () => {
     return (

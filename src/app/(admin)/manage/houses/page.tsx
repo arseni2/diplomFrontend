@@ -1,4 +1,4 @@
-import {ManageHouse} from "@/pages/manageHouse/ui/ManageHouse";
+import ManageHouse from "@/pages-fsd/manageHouse/ui/ManageHouse";
 
 const Page = () => {
     return (

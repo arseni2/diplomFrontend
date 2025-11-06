@@ -1,4 +1,4 @@
-import {ManageMessages} from "@/pages/manageMessages/ui/ManageMessages";
+import ManageMessages from "@/pages-fsd/manageMessages/ui/ManageMessages";
 
 const Page = () => {
     return (

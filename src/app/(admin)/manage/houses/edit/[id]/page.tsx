@@ -1,4 +1,4 @@
-import {ManageHouseCreate} from "@/pages/manageHouseCreate/ui/ManageHouseCreate";
+import ManageHouseCreate from "@/pages-fsd/manageHouseCreate/ui/ManageHouseCreate";
 
 
 type PropsType = {

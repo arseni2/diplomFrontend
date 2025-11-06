@@ -1,4 +1,4 @@
-import {ClientContacts} from "@/pages/clientContacts/ui/ClientContacts";
+import ClientContacts from "@/pages-fsd/clientContacts/ui/ClientContacts";
 
 const Page = () => {
     return (
