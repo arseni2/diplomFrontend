@@ -5,6 +5,8 @@ import {Handset} from "@gravity-ui/icons";
 import {Button, Text} from "@gravity-ui/uikit";
 import {Input} from "@/shared/ui/input/ui/Input";
 import styles from "./RealtorForm.module.scss";
+import { toaster } from "@gravity-ui/uikit/toaster-singleton";
+
 
 type FormValues = {
     fullName: string;
@@ -18,16 +20,35 @@ export const RealtorForm = () => {
         register,
         handleSubmit,
         formState: {errors},
+        reset
     } = useForm<FormValues>();
 
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
         console.log("Форма отправлена:", data);
 
-        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tg`, {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(data),
-        })
+        try {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tg`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data),
+            })
+            if(res.status === 201) {
+                toaster.add({
+                    name: "tgSendMessageSuccess",
+                    content: "Заявка успешно отправлена",
+                    title: "Успешно",
+                    theme: "success",
+                });
+                reset()
+            }
+        } catch (e) {
+            toaster.add({
+                name: "tgSendMessageError",
+                content: "Ошибка отправления заявки",
+                title: "Ошибка",
+                theme: "danger",
+            });
+        }
     };
 
     return (
